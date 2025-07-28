@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5dd9bed5-d4af-464b-bbf4-44c120e92c08" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="onboarding" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JmixEntity" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="30VZhzlVgAqqVJFP5L4zrIDKku0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.haulmont.jmixstudio.ai.ui.toolwindow.JmixAiToolWindowInitializer.firstProjectStart": "false",
+    "com.haulmont.jmixstudio.intellij.ui.cubatree.toolwindow.ToolWindowOpener.firstProjectStart": "false",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Jmix Application.Onboarding Jmix Application">
+    <configuration name="Onboarding Jmix Application" type="JmixRunApplication">
+      <option name="MAIN_CLASS_NAME" value="com.company.onboarding.OnboardingApplication" />
+      <module name="onboarding.main" />
+      <shortenClasspath name="ARGS_FILE" />
+      <method v="2">
+        <option name="JmixCleanConf" enabled="false" />
+        <option name="JmixCheckIncludes" enabled="false" />
+        <option name="JmixSyncDb" enabled="false" />
+        <option name="JmixAssemble" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JmixRunApplication">
+      <method v="2">
+        <option name="JmixCleanConf" enabled="false" />
+        <option name="JmixCheckIncludes" enabled="false" />
+        <option name="JmixSyncDb" enabled="false" />
+        <option name="JmixAssemble" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="OnboardingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="onboarding.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.onboarding.OnboardingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="autoCreateRunConfiguration" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5dd9bed5-d4af-464b-bbf4-44c120e92c08" name="Changes" comment="" />
+      <created>1753714837459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753714837459</updated>
+      <workItem from="1753714838850" duration="236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
