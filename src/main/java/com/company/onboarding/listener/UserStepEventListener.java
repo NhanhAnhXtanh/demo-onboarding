@@ -1,7 +1,6 @@
 package com.company.onboarding.listener;
 
 import com.company.onboarding.entity.OnBoardingStatus;
-import com.company.onboarding.entity.OnboardingStatus;
 import com.company.onboarding.entity.User;
 import com.company.onboarding.entity.UserStep;
 import io.jmix.core.DataManager;
