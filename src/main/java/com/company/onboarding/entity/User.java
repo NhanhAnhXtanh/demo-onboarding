@@ -79,8 +79,74 @@ public class User implements JmixUserDetails, HasTimeZone {
     @OneToMany(mappedBy = "user")
     private List<UserStep> steps;
 
+    @Column(name = "SALARY")
+    private Float salary;
+
+    @Column(name = "TEAMWORK")
+    private Integer teamwork;
+
+    @Column(name = "HARD_SKILLS")
+    private Integer hardSkills;
+
+    @Column(name = "SOFT_SKILLS")
+    private Integer softSkills;
+
+    @Column(name = "PROBLEM_SOLVING")
+    private Integer problemSolving;
+
+    @Column(name = "ASSESSMENT_SOLVING")
+    private Integer assessmentSolving;
+
     @Transient
     private Collection<? extends GrantedAuthority> authorities;
+
+    public Integer getAssessmentSolving() {
+        return assessmentSolving;
+    }
+
+    public void setAssessmentSolving(Integer assessmentSolving) {
+        this.assessmentSolving = assessmentSolving;
+    }
+
+    public Integer getProblemSolving() {
+        return problemSolving;
+    }
+
+    public void setProblemSolving(Integer problemSolving) {
+        this.problemSolving = problemSolving;
+    }
+
+    public Integer getSoftSkills() {
+        return softSkills;
+    }
+
+    public void setSoftSkills(Integer softSkills) {
+        this.softSkills = softSkills;
+    }
+
+    public Integer getHardSkills() {
+        return hardSkills;
+    }
+
+    public void setHardSkills(Integer hardSkills) {
+        this.hardSkills = hardSkills;
+    }
+
+    public Integer getTeamwork() {
+        return teamwork;
+    }
+
+    public void setTeamwork(Integer teamwork) {
+        this.teamwork = teamwork;
+    }
+
+    public Float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Float salary) {
+        this.salary = salary;
+    }
 
     public FileRef getPicture() {
         return picture;

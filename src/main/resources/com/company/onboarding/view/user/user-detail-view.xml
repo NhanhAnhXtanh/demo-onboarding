@@ -58,6 +58,12 @@
                            classNames="user-picture"/>
                 </hbox>
             </details>
+            <textField property="salary"/>
+            <textField property="assessmentSolving"/>
+            <textField property="teamwork"/>
+            <textField property="hardSkills"/>
+            <textField property="softSkills"/>
+            <textField property="problemSolving"/>
         </formLayout>
         <hbox id="stepsButtonsPanel" classNames="buttons-panel">
             <button id="generateButton" text="Generate"/>

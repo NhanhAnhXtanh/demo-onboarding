@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="onboarding">
+        <addColumn tableName="USER_">
+            <column name="SOFT_SKILLS" type="INT"/>
+            <column name="TEAMWORK" type="INT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="2" author="onboarding">
+        <dropNotNullConstraint columnDataType="int" columnName="ASSESSMENT_SOLVING" tableName="USER_"/>
+    </changeSet>
+    <changeSet id="3" author="onboarding">
+        <dropNotNullConstraint columnDataType="int" columnName="HARD_SKILLS" tableName="USER_"/>
+    </changeSet>
+    <changeSet id="4" author="onboarding">
+        <dropNotNullConstraint columnDataType="int" columnName="PROBLEM_SOLVING" tableName="USER_"/>
+    </changeSet>
+</databaseChangeLog>

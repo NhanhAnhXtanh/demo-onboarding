@@ -35,6 +35,9 @@ dependencies {
     implementation 'io.jmix.datatools:jmix-datatools-flowui-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.jmix.charts:jmix-charts-flowui-starter'
+    implementation 'io.jmix.superset:jmix-superset-starter'
+    implementation 'io.jmix.superset:jmix-superset-flowui-starter'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 

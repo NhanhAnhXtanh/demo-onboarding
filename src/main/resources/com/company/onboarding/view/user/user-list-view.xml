@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui"
       title="msg://UserListView.title"
       focusComponent="usersDataGrid">
     <data>
@@ -70,11 +71,98 @@
                 <column property="department"/>
                 <column property="joiningDate"/>
                 <column key="picture" sortable="false" flexGrow="0" resizable="false"/>
+                <column property="salary"/>
+                <column property="problemSolving"/>
             </columns>
         </dataGrid>
         <hbox id="lookupActions" visible="false">
             <button id="selectButton" action="selectAction"/>
             <button id="discardButton" action="discardAction"/>
         </hbox>
+
+        <vbox width="100%" spacing="true" padding="large">
+
+            <!-- HÀNG 1: Bar + Radar -->
+            <hbox width="100%" spacing="true" justifyContent="CENTER">
+                <charts:chart id="bar" width="40em" height="25em">
+                    <charts:title text="Salary &amp; Assessment Total"/>
+                    <charts:tooltip trigger="AXIS">
+                        <charts:axisPointer type="SHADOW"/>
+                    </charts:tooltip>
+                    <charts:legend top="40" left="center"/>
+                    <charts:dataSet>
+                        <charts:source dataContainer="usersDc"
+                                       categoryField="username" valueFields="salary assessmentSolving"/>
+                    </charts:dataSet>
+                    <charts:dataZoom>
+                        <charts:insideDataZoom/>
+                        <charts:sliderDataZoom orientation="HORIZONTAL"/>
+                        <charts:sliderDataZoom orientation="VERTICAL" right="5%"/>
+                    </charts:dataZoom>
+
+                    <charts:xAxes>
+                        <charts:xAxis/>
+                    </charts:xAxes>
+                    <charts:yAxes>
+                        <charts:yAxis name="Lương" position="LEFT" alignTicks="true">
+                            <charts:axisLabel
+                                    formatterFunction="function(value){return value / 100;}"/>
+                        </charts:yAxis>
+                        <charts:yAxis name="Tổng" position="RIGHT" alignTicks="true"/>
+                    </charts:yAxes>
+                    <charts:series>
+                        <charts:bar name="Salary" yAxisIndex="0"/>
+                        <charts:line name="Assessment Total" yAxisIndex="1"/>
+                    </charts:series>
+                </charts:chart>
+
+                <charts:chart id="radar" width="40em" height="25em">
+                    <charts:title text="Assessment Results"/>
+                    <charts:dataSet>
+                        <charts:source dataContainer="usersDc"
+                                       valueFields="hardSkills problemSolving softSkills teamwork"/>
+                    </charts:dataSet>
+                    <charts:radar>
+                        <charts:indicators>
+                            <charts:indicator name="Hard Skills" max="5"/>
+                            <charts:indicator name="Problem Solving" max="5"/>
+                            <charts:indicator name="Soft Skills" max="5"/>
+                            <charts:indicator name="Teamwork" max="5"/>
+                        </charts:indicators>
+                    </charts:radar>
+                    <charts:series>
+                        <charts:radar/>
+                    </charts:series>
+                </charts:chart>
+            </hbox>
+
+            <!-- HÀNG 2: Pie + Donut -->
+            <hbox width="100%" spacing="true" justifyContent="CENTER">
+                <charts:chart id="chart" width="35em" height="25em">
+                    <charts:title text="Assessment" subtext="By countries"/>
+                    <charts:legend top="25" left="center"/>
+                    <charts:tooltip trigger="ITEM"/>
+
+                    <charts:dataSet>
+                        <charts:source dataContainer="usersDc"
+                                       categoryField="username" valueFields="assessmentSolving"/>
+                    </charts:dataSet>
+
+                    <charts:series>
+                        <charts:pie name="Assessment">
+                            <charts:label formatter="{b}: {d}%"/>
+                        </charts:pie>
+                    </charts:series>
+                </charts:chart>
+
+                <charts:chart id="pie" width="35em" height="25em">
+                    <charts:series>
+                        <charts:pie name="Onboarding Status" radius="55% 85%">
+                            <charts:label formatter="{b} : {d}%"/>
+                        </charts:pie>
+                    </charts:series>
+                </charts:chart>
+            </hbox>
+        </vbox>
     </layout>
 </view>
