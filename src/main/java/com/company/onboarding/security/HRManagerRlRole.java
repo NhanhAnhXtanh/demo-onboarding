@@ -20,17 +20,17 @@ public interface HRManagerRlRole {
     @JpqlRowLevelPolicy(entityClass = User.class, where = "{E}.department.hrManager.id = :current_user_id")
     void user();
 
-    @JpqlRowLevelPolicy(
-            entityClass = User.class,
-            where = "{E}.department.id in :session_departmentIds"
-    )
-    void usersByDept();
-
-    @JpqlRowLevelPolicy(
-            entityClass = Department.class,
-            where = "{E}.id in :session_departmentIds"
-    )
-    void depts();
+//    @JpqlRowLevelPolicy(
+//            entityClass = User.class,
+//            where = "{E}.department.id in :session_departmentIds"
+//    )
+//    void usersByDept();
+//
+//    @JpqlRowLevelPolicy(
+//            entityClass = Department.class,
+//            where = "{E}.id in :session_departmentIds"
+//    )
+//    void depts();
 
 //    @PredicateRowLevelPolicy(entityClass = Department.class, actions = RowLevelPolicyAction.READ)
 //    default RowLevelBiPredicate<Department, ApplicationContext> deptPredicate() {

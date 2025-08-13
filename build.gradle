@@ -38,13 +38,13 @@ dependencies {
     implementation 'io.jmix.charts:jmix-charts-flowui-starter'
     implementation 'io.jmix.superset:jmix-superset-starter'
     implementation 'io.jmix.superset:jmix-superset-flowui-starter'
-
-    runtimeOnly 'org.hsqldb:hsqldb'
+    implementation 'org.postgresql:postgresql:42.7.3'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'io.jmix.flowui:jmix-flowui-test-assist'
+    implementation 'org.postgresql:postgresql'
 }
 
 configurations.implementation {
